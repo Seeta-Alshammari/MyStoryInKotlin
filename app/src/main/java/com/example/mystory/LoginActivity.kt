@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 
                // || checkboxView?.isChecked != true
             ) {
-                    editTextUsername?.setError("Enter your email")
+                    editTextUsername?.error= ("Enter your email")
                 //Toast.makeText(this, "Enter your data", Toast.LENGTH_LONG).show()
             } else if ( editTextPassword?.text?.isEmpty() == true) {
                 editTextPassword?.error = "Enter your password"

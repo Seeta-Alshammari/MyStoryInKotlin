@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+class AddStoryActivity
 
 class MainActivity : AppCompatActivity() {
     private var textViewEmail: TextView? = null
@@ -58,7 +59,6 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             else -> true
-
         }
     }
 
@@ -100,11 +100,29 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayStories() {
         val storiesArray = ArrayList<Story>()
-        storiesArray.add(Story("قصتي الاولى _ Kotlin"," الاسبوع الاول في معسكر كوتلن ","تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع "))
-        storiesArray.add(Story("قصتي الثانية_ Kotlin "," الاسبوع الثاني في معسكر كوتلن ","تحديات وعقبات الاسبوع الثاني في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع "))
-        storiesArray.add(Story("قصتي الثالثة  _ Kotlin"," الاسبوع الثالث في معسكر كوتلن ","تحديات وعقبات الاسبوع الثالث في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع  "))
+        storiesArray.add(Story("قصتي الاولى _ Kotlin", " الاسبوع الاول في معسكر كوتلن ", "تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع "
+            )
+        )
+        storiesArray.add(Story("قصتي الثانية_ Kotlin ", " الاسبوع الثاني في معسكر كوتلن ", "تحديات وعقبات الاسبوع الثاني في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع "
+            )
+        )
+        storiesArray.add(Story("قصتي الثالثة  _ Kotlin", " الاسبوع الثالث في معسكر كوتلن ", "تحديات وعقبات الاسبوع الثالث في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع  "
+            )
+        )
 
-        val customAdapter = CustomAdapter(storiesArray,this)
+        val customAdapter = CustomAdapter(storiesArray, this)
         recyclerView?.adapter = customAdapter
+
+        if (intent.getStringExtra("title") != null) {
+            val title = intent.getStringExtra("title")
+            val subTitle = intent.getStringExtra("subtitle")
+            val desc = intent.getStringExtra("desc")
+            val newStory = Story(title!!, subTitle!!, desc!!)
+            storiesArray.add(newStory)
+            customAdapter.notifyDataSetChanged()
+        }
     }
 }
+
+
+

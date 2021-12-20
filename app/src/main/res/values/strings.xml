@@ -9,6 +9,13 @@
     <string name="logout"> Logout </string>
     <string name="open"> Open </string>
     <string name="close"> Close </string>
+    <string name="enter_title"> Enter Title Her  </string>
+    <string name="enter_sub_title"> Enter Title Sub Her  </string>
+    <string name="enter_description"> Enter Title Description Her  </string>
+    <string name="add_story"> Add Story   </string>
+
+
+
 
 
 </resources>
