@@ -12,7 +12,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-class AddStoryActivity
 
 class MainActivity : AppCompatActivity() {
     private var textViewEmail: TextView? = null
@@ -97,7 +96,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
-
     private fun displayStories() {
         val storiesArray = ArrayList<Story>()
         storiesArray.add(Story("قصتي الاولى _ Kotlin", " الاسبوع الاول في معسكر كوتلن ", "تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع تحديات وعقبات الاسبوع الاول في المعسكر،بالاضافة الى ماذا تعلمت في هذا الاسبوع "
