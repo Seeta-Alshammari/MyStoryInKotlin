@@ -31,13 +31,13 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolBarView)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setupDrawer()
-        updateEmailInHeader(email!!) //دالة لتمرير الايميل
+        updateEmailInHeader(email) //دالة لتمرير الايميل
         drawerClicks()//دالة التحكم بعملية الضغط على الزر
         openAddStoryActivity()
         displayStories()
     }
 
-    private fun updateEmailInHeader(email: String) {
+    private fun updateEmailInHeader(email: String?) {
         val headerView =
             navigationView?.getHeaderView(0)//دالة تمريرال headerView,صفرلأن عندنا  headerView  واحد فقط
         val textViewEmail =
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openAddStoryActivity() {
         buttonAddStory?.setOnClickListener {
-            val i = Intent(this, AddStoryActivity::class.java)
+            val i = Intent(this,AddStoryActivity::class.java)
             startActivity(i)
         }
     }
