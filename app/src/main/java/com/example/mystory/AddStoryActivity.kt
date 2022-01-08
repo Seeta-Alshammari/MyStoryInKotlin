@@ -9,7 +9,7 @@ import android.widget.EditText
 class AddStoryActivity : AppCompatActivity() {
     private var editTextTitle:EditText? = null
     private var editTextSubTitle : EditText? = null
-    private  var editTextDesc : EditText? = null
+    private  var editTextDesc : EditText? = nulle
     private var buttonAddStory:Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
